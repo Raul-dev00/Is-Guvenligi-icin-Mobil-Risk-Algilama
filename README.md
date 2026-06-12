@@ -81,8 +81,3 @@ cd HealthSafety
 dotnet build
 dotnet run
 ```
-
----
-
-## 🔒 Lisans & Güvenlik
-Bu proje iş güvenliği kurallarına uygun olarak veri gizliliğini korur. Sisteme sadece yetkili (admin) hesaplar erişebilir ve sunucu ile mobil cihaz arasındaki tüm iletişim JWT token standartlarıyla şifrelenmektedir.
