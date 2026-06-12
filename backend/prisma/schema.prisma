@@ -1,0 +1,114 @@
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "windows"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  admin
+  employee
+}
+
+enum SensorType {
+  accelerometer
+  gps
+  microphone
+  network
+}
+
+enum AlarmType {
+  hard_impact
+  fall_suspected
+  danger_zone_entry
+  inactivity
+  high_noise
+  network_lost
+  high_risk_score
+}
+
+enum AlarmSeverity {
+  low
+  medium
+  high
+  critical
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String   @map("password_hash")
+  role         UserRole @default(employee)
+  fullName     String   @map("full_name")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updatedAt    DateTime @updatedAt @map("updated_at")
+
+  devices Device[]
+
+  @@map("users")
+}
+
+model Device {
+  id         String    @id @default(uuid())
+  userId     String    @map("user_id")
+  deviceName String    @map("device_name")
+  platform   String?
+  lastSeenAt DateTime? @map("last_seen_at")
+  isOnline   Boolean   @default(false) @map("is_online")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
+
+  user           User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sensorReadings SensorReading[]
+  alarms         Alarm[]
+
+  @@map("devices")
+}
+
+model SensorReading {
+  id         String     @id @default(uuid())
+  deviceId   String     @map("device_id")
+  sensorType SensorType @map("sensor_type")
+  payload    Json
+  recordedAt DateTime   @map("recorded_at")
+  createdAt  DateTime   @default(now()) @map("created_at")
+
+  device Device @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+
+  @@index([deviceId, sensorType, recordedAt])
+  @@map("sensor_readings")
+}
+
+model DangerZone {
+  id        String   @id @default(uuid())
+  name      String
+  latitude  Float
+  longitude Float
+  radiusM   Float    @map("radius_m")
+  isActive  Boolean  @default(true) @map("is_active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("danger_zones")
+}
+
+model Alarm {
+  id         String        @id @default(uuid())
+  deviceId   String        @map("device_id")
+  alarmType  AlarmType     @map("alarm_type")
+  severity   AlarmSeverity @default(medium)
+  message    String
+  riskScore  Float         @default(0) @map("risk_score")
+  isResolved Boolean       @default(false) @map("is_resolved")
+  metadata   Json?
+  createdAt  DateTime      @default(now()) @map("created_at")
+  resolvedAt DateTime?     @map("resolved_at")
+
+  device Device @relation(fields: [deviceId], references: [id], onDelete: Cascade)
+
+  @@index([deviceId, isResolved, createdAt])
+  @@map("alarms")
+}

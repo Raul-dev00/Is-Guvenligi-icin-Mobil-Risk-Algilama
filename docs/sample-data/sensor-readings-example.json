@@ -1,0 +1,35 @@
+{
+  "deviceId": "00000000-0000-0000-0000-000000000001",
+  "readings": [
+    {
+      "sensorType": "accelerometer",
+      "payload": { "x": 0.12, "y": 0.05, "z": 9.78 },
+      "recordedAt": "2026-06-11T08:00:00.000Z"
+    },
+    {
+      "sensorType": "gps",
+      "payload": { "lat": 40.1885, "lng": 29.061, "accuracy": 4.2 },
+      "recordedAt": "2026-06-11T08:00:00.000Z"
+    },
+    {
+      "sensorType": "microphone",
+      "payload": { "decibels": 62.5 },
+      "recordedAt": "2026-06-11T08:00:00.000Z"
+    },
+    {
+      "sensorType": "network",
+      "payload": { "connected": true, "type": "wifi" },
+      "recordedAt": "2026-06-11T08:00:00.000Z"
+    },
+    {
+      "sensorType": "accelerometer",
+      "payload": { "x": 8.5, "y": 12.0, "z": 28.5 },
+      "recordedAt": "2026-06-11T08:00:03.000Z"
+    },
+    {
+      "sensorType": "gps",
+      "payload": { "lat": 40.1886, "lng": 29.0612, "accuracy": 5.0 },
+      "recordedAt": "2026-06-11T08:00:03.000Z"
+    }
+  ]
+}
