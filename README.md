@@ -31,6 +31,9 @@ Yöneticiler saha çalışanlarının anlık konumlarını, tehlikeli bölgeleri
 Cihazlara dair detaylı analizlerin ve acil durum uyarılarının bulunduğu menüler:
 
 ![Web Paneli Detay 1](images/web-4.png)
+
+Yöneticiyle ilgili arayüzler
+
 ![Web Paneli Detay 2](images/web-5.png)
 ![Web Paneli Görüntüsü 2](images/web-3.png)
 
