@@ -9,7 +9,7 @@ Bu proje, saha çalışanlarının güvenliğini en üst düzeye çıkarmak içi
 ## 🌟 Öne Çıkan Özellikler
 
 - **Gerçek Zamanlı Konum Takibi:** Çalışanlar harita üzerinden WebSockets (Socket.io) sayesinde anlık (gecikmesiz) olarak izlenir.
-- **Yapay Zeka Destekli Düşme/Darbe Tespiti:** Z-Score ve eşik değer (threshold) algoritmalarıyla ivmeölçer verileri analiz edilir; olağandışı ivmelenmeler anında algılanır.
+- **Düşme/Darbe Tespiti:** Z-Score ve eşik değer (threshold) algoritmalarıyla ivmeölçer verileri analiz edilir; olağandışı ivmelenmeler anında algılanır.
 - **Tehlikeli Bölge (Geofencing) Kontrolü:** Çalışanlar yasaklı veya tehlikeli (radyasyon, yüksek gerilim vs.) bir alana girdiğinde sistem alarm verir.
 - **İşçi Hareketsizlik Uyarısı:** Belirlenen süreden daha uzun süre hareketsiz kalan cihazlar tespit edilir.
 - **Çok Platformlu Çözüm:** 
