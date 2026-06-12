@@ -1,4 +1,4 @@
-# İş Güvenliği İçin Mobil Risk Algılama Sistemi 🚧
+# İş Güvenliği İçin Mobil Risk Algılama Sistemi 
 
 Bu proje, saha çalışanlarının güvenliğini en üst düzeye çıkarmak için geliştirilmiş entegre bir **IoT / Mobil Güvenlik Çözümüdür**. Cep telefonlarının ivmeölçer, GPS ve mikrofon gibi donanımlarını kullanarak işçilerin durumunu anlık olarak izler ve olası tehlikelerde (düşme, sert darbe, tehlikeli bölgeye giriş, yüksek gürültü) yönetim paneline anlık alarmlar iletir.
 
@@ -6,7 +6,7 @@ Bu proje, saha çalışanlarının güvenliğini en üst düzeye çıkarmak içi
 
 ---
 
-## 🌟 Öne Çıkan Özellikler
+##  Öne Çıkan Özellikler
 
 - **Gerçek Zamanlı Konum Takibi:** Çalışanlar harita üzerinden WebSockets (Socket.io) sayesinde anlık (gecikmesiz) olarak izlenir.
 - **Düşme/Darbe Tespiti:** Z-Score ve eşik değer (threshold) algoritmalarıyla ivmeölçer verileri analiz edilir; olağandışı ivmelenmeler anında algılanır.
@@ -19,11 +19,11 @@ Bu proje, saha çalışanlarının güvenliğini en üst düzeye çıkarmak içi
 
 ---
 
-## 📸 Ekran Görüntüleri
+##  Ekran Görüntüleri
 
 Projenin farklı modüllerine ait ekran görüntüleri aşağıda listelenmiştir.
 
-### 💻 Yönetici Web Paneli
+###  Yönetici Web Paneli
 Yöneticiler saha çalışanlarının anlık konumlarını, tehlikeli bölgeleri (kırmızı çemberler) ve sistemden gelen canlı uyarıları bu ekranda görürler.
 
 ![Web Paneli Görüntüsü 1](images/web-2.png)
@@ -37,7 +37,7 @@ Yöneticiyle ilgili arayüzler
 ![Web Paneli Detay 2](images/web-5.png)
 ![Web Paneli Görüntüsü 2](images/web-3.png)
 
-### 📱 Mobil Uygulama (Veri Toplama Modülü)
+###  Mobil Uygulama (Veri Toplama Modülü)
 Saha çalışanının arka planda konum, ivme ve gürültü verilerini sürekli okuyup sunucuya aktardığı arayüz.
 
 <p align="center">
@@ -47,7 +47,7 @@ Saha çalışanının arka planda konum, ivme ve gürültü verilerini sürekli 
 
 ---
 
-## 🛠 Kullanılan Teknolojiler (Sistem Mimarisi)
+##  Kullanılan Teknolojiler (Sistem Mimarisi)
 
 1. **Backend / Sunucu:** Node.js, Express.js, Socket.io
 2. **Veritabanı ve ORM:** PostgreSQL, Prisma ORM
@@ -57,7 +57,7 @@ Saha çalışanının arka planda konum, ivme ve gürültü verilerini sürekli 
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+##  Kurulum ve Çalıştırma
 
 ### 1. Backend (Sunucu)
 ```bash
