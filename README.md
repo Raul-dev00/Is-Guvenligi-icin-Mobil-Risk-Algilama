@@ -28,7 +28,7 @@ Yöneticiler saha çalışanlarının anlık konumlarını, tehlikeli bölgeleri
 
 ![Web Paneli Görüntüsü 1](images/web-2.png)
 
-Ayrıca çalışanlara ve cihazlara dair detaylı analizlerin, risk puanlarının ve acil durum uyarılarının bulunduğu menüler:
+Cihazlara dair detaylı analizlerin ve acil durum uyarılarının bulunduğu menüler:
 
 ![Web Paneli Detay 1](images/web-4.png)
 ![Web Paneli Detay 2](images/web-5.png)
